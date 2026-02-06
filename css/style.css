@@ -1,0 +1,556 @@
+/* Reset Dasar */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', sans-serif;
+  /* Atau font pilihanmu */
+}
+
+body {
+  background-color: #000;
+}
+
+#desktop-1 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  /* Satu layar penuh */
+  display: flex;
+  justify-content: center;
+  /* Center Horizontal */
+  align-items: center;
+  /* Center Vertical */
+  overflow: hidden;
+}
+
+/* Background Atas (Ungu Pink) */
+.bg-gradient-top {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 50%;
+  /* Setengah layar */
+  background: linear-gradient(180deg, #7A26C1 0%, #E233FF 100%);
+  z-index: 1;
+}
+
+/* Background Bawah (Hitam Pekat) */
+.bg-black-bottom {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 50%;
+  /* Setengah layar */
+  background: #000000;
+  z-index: 1;
+}
+
+/* Hologram */
+.hologram-container {
+  position: absolute;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.hologram-container img {
+  width: 100vw;
+  /* Sesuaikan besar hologramnya */
+  max-width: none;
+  height:auto;
+  object-fit: cover;
+}
+
+/* Text Center */
+.hero-text {
+  position: relative;
+  z-index: 3;
+  /* Paling atas */
+  text-align: left;
+  /* Sesuai Figma, teksnya agak ke kiri center */
+  color: white;
+}
+
+.hero-text h1 {
+  font-size: 4rem;
+  font-weight: 800;
+  line-height: 1;
+}
+
+.hero-text h2 {
+  font-size: 3rem;
+  font-weight: 600;
+}
+
+.hero-text p {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* --- DESKTOP 2 --- */
+#desktop-2 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  /* Sisanya hitam pekat */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Persegi Gradasi di Samping Kiri */
+.side-gradient {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 70%;
+  /* Ukuran gradasi di sisi kiri */
+  height: 100%;
+  background: linear-gradient(180deg, #7A26C1 0%, #E233FF 100%);
+  z-index: 1;
+}
+
+.container-desktop-2 {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  width: 85%;
+  max-width: 1200px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-content {
+  flex: 1;
+  color: white;
+  padding-right: 50px;
+}
+
+.text-content h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.text-content p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+/* Container Foto dan Hologram */
+.profile-content {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hologram-frame {
+  position: relative;
+  width: 550px;
+  /* Perbesar sedikit agar hologram lebih terlihat */
+  height: 550px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hologram-img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  position: absolute;
+  /* Melayang di dalam frame */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  /* Benar-benar di tengah */
+  z-index: 0;
+  /* Angka lebih kecil = di belakang */
+  opacity: 0.8;
+  /* Opsional: agar agak transparan jika terlalu terang */
+}
+
+/* FOTO PROFIL JADI BULAT */
+.profile-photo {
+  width: 220px;
+  /* Sesuaikan ukuran foto di dalam hologram */
+  height: 220px;
+  object-fit: cover;
+  border-radius: 50%;
+  /* Membuat foto asli yang kotak menjadi bulat */
+  position: relative;
+  z-index: 2;
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  /* Border tipis agar manis */
+}
+
+/* --- DESKTOP 3 --- */
+#desktop-3 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-color: #000;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Elemen Matahari / Lingkaran Ungu di Pojok */
+.sun-corner {
+  position: absolute;
+  top: -80px;
+  right: -80px;
+  width: 400px;
+  height: 400px;
+  background: linear-gradient(180deg, #7A26C1 0%, #E233FF 100%);
+  border-radius: 50%;
+  z-index: 1;
+  /* Opacity dibuat 1 agar tidak transparan */
+  opacity: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.sun-corner h1 {
+  color: white;
+  font-size: 2.8rem;
+  font-weight: 800;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* Container Skills Utama */
+.skills-container {
+  position: relative;
+  z-index: 3;
+  width: 85%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 50px;
+}
+
+.skill-category {
+  margin-bottom: -70px;
+}
+
+.skill-title {
+  font-size: 1.5rem;
+  margin-bottom: 30px;
+  font-weight: 800;
+}
+
+.skill-title.hard {
+  color: #E233FF;
+}
+
+.skill-title.soft {
+  color: #E233FF;
+}
+
+.skill-items {
+  display: flex;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+/* Container per item skill */
+.item {
+  text-align: center;
+  width: 150px;
+  /* Diperbesar dari 150px agar menampung icon besar */
+  transition: transform 0.3s ease;
+  /* Bonus: efek gerak saat kursor di atasnya */
+}
+
+/* Hover Effect agar lebih interaktif */
+.item:hover {
+  transform: translateY(-10px);
+}
+
+/* Memperbesar Icon */
+.item img {
+  width: 150px;
+  /* Ukuran icon diperbesar signifikan */
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 20px;
+  /* Efek Glow agar icon terlihat menyala di atas hologram */
+  filter: drop-shadow(0 0 15px rgba(226, 51, 255, 0.7));
+}
+
+.item p {
+  color: white;
+  font-size: 1.0rem;
+  /* Ukuran teks sedikit diperbesar agar seimbang */
+  font-weight: 600;
+}
+
+/* Soft Skills digeser lebih ke kanan */
+.soft-section {
+  padding-left: 65%;
+  padding-bottom: 20%;
+  /* Tambahkan padding agar bergeser ke kanan */
+  margin-top: 20px;
+}
+
+/* Hologram dipindahkan lebih ke bawah */
+.wave-hologram {
+  position: absolute;
+  bottom: -65%;
+  /* Nilai negatif membuat gambar turun lebih ke bawah */
+  left: -5%;
+  width: 100%;
+  z-index: 2;
+  pointer-events: none;
+  /* Agar tidak menghalangi klik pada icon */
+}
+
+.wave-hologram img {
+  width: 100vw;
+  height: auto;
+  object-fit: cover;
+  display: block;
+}
+
+/* --- DESKTOP 4 --- */
+#desktop-4 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+#desktop-4 .bg-full {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#desktop-4 .bg-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.projects-content {
+  position: relative;
+  z-index: 2;
+  width: 90%;
+  max-width: 1200px;
+}
+
+.section-title {
+  font-size: 3rem;
+  color: white;
+  margin-bottom: 50px;
+  font-weight: 800;
+}
+
+.projects-grid {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.project-card {
+  width: 32%;
+  background: rgba(122, 38, 193, 0.4);
+  /* Background pink-ungu transparan */
+  padding: 15px;
+  border-radius: 5px;
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover {
+  transform: scale(1.05);
+}
+
+/* Membuat posisi kartu tengah agak turun seperti di Figma */
+.central-card {
+  margin-top: 60px;
+}
+
+.card-frame {
+  width: 100%;
+  height: 200px;
+  background: #000;
+  margin-bottom: 15px;
+  overflow: hidden;
+}
+
+.card-frame img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-info h3 {
+  color: white;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+}
+
+.project-info p {
+  color: #ddd;
+  font-size: 0.9rem;
+  line-height: 1.4;
+}
+
+/* --- DESKTOP 5 REVISED --- */
+#desktop-5 {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  html {
+      /* Mengaktifkan fitur snap bawaan browser */
+      scroll-snap-type: y mandatory;
+      scroll-behavior: smooth;
+    }
+  
+    body {
+      background-color: #000;
+      overflow-y: scroll;
+      /* Mengizinkan scroll alami */
+    }
+  
+        .panel {
+          width: 100%;
+          height: 100vh;
+          scroll-snap-align: start;
+          /* Mengunci titik awal section saat scroll */
+          scroll-snap-stop: always;
+          /* Mencegah user 'melompati' section */
+          position: relative;
+          overflow: hidden;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+  background-color: #000;
+  /* Warna cadangan */
+}
+
+/* Memastikan background memenuhi seluruh layar */
+#desktop-5 .bg-full {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+#desktop-5 .bg-full img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Background akan menutupi seluruh area tanpa gepeng */
+}
+
+/* Kontainer utama konten agar berada di tengah */
+.contact-content {
+  position: relative;
+  z-index: 2;
+  width: 85%;
+  max-width: 1200px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  /* Sesuai Figma, judul ke kiri */
+}
+
+.contact-content .section-title {
+  font-size: 3.5rem;
+  color: white;
+  margin-bottom: 40px;
+  font-weight: 800;
+  text-transform: uppercase;
+}
+
+/* Grid untuk ikon dan teks */
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  /* 2 Kolom sejajar */
+  gap: 40px 60px;
+  /* Jarak antar item */
+  width: 100%;
+}
+
+.contact-item {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+/* Lingkaran Ikon Sosial Media */
+.icon-circle {
+  width: 65px;
+  height: 65px;
+  background: rgba(122, 38, 193, 0.3);
+  /* Ungu transparan */
+  border: 2px solid #E233FF;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 15px rgba(226, 51, 255, 0.4);
+  flex-shrink: 0;
+  /* Mencegah ikon gepeng */
+}
+
+.icon-circle img {
+  width: 35px;
+  height: 35px;
+  object-fit: contain;
+}
+
+.contact-item p {
+  color: white;
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 0;
+}
+
+
+/* Efek awal: Elemen tersembunyi dan sedikit turun ke bawah */
+.hero-text,
+.container-desktop-2,
+.skills-container,
+.projects-content,
+.contact-content {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: all 1s ease-out;
+  /* Durasi animasi muncul */
+}
+
+/* Efek saat aktif: Dipicu oleh JavaScript Intersection Observer */
+.panel.active .hero-text,
+.panel.active .container-desktop-2,
+.panel.active .skills-container,
+.panel.active .projects-content,
+.panel.active .contact-content {
+  opacity: 1;
+  transform: translateY(0);
+}
